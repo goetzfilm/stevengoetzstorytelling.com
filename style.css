@@ -518,6 +518,7 @@ label {
 }
 .isotope-wrapper {
 }
+.grid-sizer,
 .isotope-item {
   position: relative;
   padding: 2%;
@@ -528,7 +529,15 @@ label {
   min-height: 50px;
     height: auto;
 }
-.isotope-item {
+.isotope-item--width2 {
+	position: relative;
+  padding: 2%;
+	width: 66.6666%;
+}
+.isotope-item--width3 {
+	position: relative;
+  padding: 2%;
+	width: 100%;
 }
 .lazyload,
 .lazyloading {
@@ -565,7 +574,10 @@ label {
 	.special-container {
 		padding: 1%;
 	}
-	.isotope-item {
+	.isotope-item,
+	.isotope-item--width2,
+	.isotope-item--width3
+	 {
 		padding: 1%;
 	}
 

@@ -81,6 +81,7 @@ a{
 	padding:0;
 	margin:0;
 	box-sizing: border-box;
+	transition-duration: 0s;
 }
 
 body {
@@ -94,7 +95,7 @@ a {
 }
 
 a:hover {
-	color: #333;
+	color: #000;
 	background-color: #fff000;
 }
 
@@ -126,9 +127,10 @@ img {
 figcaption {
     font-size: 0.9rem;
     margin: 0;
-    padding: 0 10px 40px;
+    padding: 2%;
     text-align: center;
     width: 100%;
+		line-height: 1.4;
 }
 
 p {
@@ -223,13 +225,13 @@ a.cite {
 
 a:hover.cite {
 	background-color: #eee;
-	color: #333;
+	color: #000;
 }
 
 /* STRUCTURE */
 
 nav {
-	background-color:#333333;
+	background-color:#333;
 }
 nav.secondary {
 	background-color: transparent;
@@ -256,15 +258,20 @@ li.header a {
 	text-decoration: none;
 }
 
-li.header a:hover {
-	color: #000;
-}
 a.current {
 	color: #fff;
 	background-color: #333;
 	border-bottom: 2px solid #990000;
 	text-decoration: none;
 }
+
+a.current:hover {
+	color: #fff;
+	background-color: #333;
+	border-bottom: 2px solid #990000;
+	text-decoration: none;
+}
+
 
 ul.header, ul.footer {
 	margin:0 auto;
@@ -274,9 +281,9 @@ ul.header, ul.footer {
 
 main {
 	background-color:#fff;
-	width:100%;
+	max-width:2600px;
 	margin:0 auto;
-	border-bottom:1px solid #ddd;
+	border:1px solid #ddd;
 }
 
 section {
@@ -321,8 +328,14 @@ li.logo {
     text-align: left;
     width: 52%;
 }
+li a {
+	color: #fff;
+}
+li a:hover {
+	color: #000;
+}
+
 li.logo a {
-    color: #fff;
     margin: 0;
     text-align: left;
 		padding: 0;
@@ -392,6 +405,7 @@ img.author {
 .my-gallery2 {
 }
 .my-gallery2 img {
+	padding: 2%;
 }
 .my-gallery2 figure {
 
@@ -413,9 +427,10 @@ img.author {
 .multiple-caption {
     font-size: 0.9rem;
     margin: 0;
-    padding: 0 10px 40px;
+		padding: 0 2% 2%;
     text-align: center;
     width: 100%;
+		line-height: 1.4;
 }
 
 .container {
@@ -426,11 +441,11 @@ img.author {
 }
 
 .two-third {
-	max-width: 800px;
+	max-width: 66.66666%;
 }
 
 .half {
-	max-width: 600px;
+	max-width: 50%;
 }
 
 .halfs {
@@ -439,23 +454,17 @@ img.author {
 }
 
 .left {
-	padding-right: 5px;
 }
 
 .right {
-	padding-left: 5px;
 }
 
 .thirds {
 	float: left;
 	width: 33.333333333333333%;
-	padding-left: 5px;
-	padding-right: 5px;
 }
 
 .fig-thirds {
-	padding-left: 5px;
-	padding-right: 5px;
 }
 
 .end {
@@ -506,9 +515,9 @@ a.insta:hover {
 /* PORTFOLIO */
 
 .isotope-toolbar {
-    color: #555;
+    color: #333;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 2% 2%;
 }
 .isotope-toolbar a {
   color: #fff;
@@ -523,33 +532,65 @@ label {
 .isotope-item {
   position: relative;
   padding: 2%;
-	width: 33.3333%;
+	width: 33.33333%;
+}
+.grid-sizer2,
+.isotope-item2 {
+  position: relative;
+  padding: 2%;
+	width: 100%;
+}
+.grid-sizer3,
+.isotope-item3 {
+	position: relative;
+  padding: 2%;
+	width: 33.33333%;
+}
+.grid-sizer4,
+.isotope-item4 {
+	position: relative;
+  padding: 2%;
+	width: 50%;
 }
 .isotope-item img {
   width: 100%;
   min-height: 50px;
-    height: auto;
-}
-.isotope-item--width2 {
-	position: relative;
-  padding: 2%;
-	width: 66.6666%;
-}
-.isotope-item--width3 {
-	position: relative;
-  padding: 2%;
-	width: 100%;
+  height: auto;
 }
 .lazyload,
 .lazyloading {
     opacity: 0;
+		transition-duration: 0s;
 }
 .lazyloaded {
     opacity: 1;
-    transition: opacity 300ms;
+		transition-duration: 0s;
 }
 
 /*TEST*/
+
+.card {
+	padding: 2%;
+	border: 1px solid #eee;
+}
+
+.card img {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2%;
+	border:1px dotted #ddd;
+	background: #eee;
+}
+
+.card img:hover {
+	background: #fff000;
+}
+
+.card p {
+	text-align: center;
+	margin: 0 auto;
+	padding: 2% 2% 0;
+}
 
 /* MEDIA QUERIES */
 
@@ -573,13 +614,22 @@ label {
 		padding: 1rem 0;
 	}
 	.special-container {
-		padding: 1%;
 	}
 	.isotope-item,
-	.isotope-item--width2,
-	.isotope-item--width3
+	.isotope-item2,
+	.isotope-item3,
+	.isotope-item4
 	 {
-		padding: 1%;
+	}
+
+	.grid-sizer,
+	.isotope-item {
+		width: 50%;
+	}
+
+	.grid-sizer3,
+	.isotope-item3 {
+		width: 100%;
 	}
 
 }
